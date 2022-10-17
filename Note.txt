@@ -1,0 +1,37 @@
+// env Configuration for use of PostgreSQL Database
+
+You have to add below fields to access your database :
+
+jwtSecret = <JWT_SECRET_KEY>
+user = postgres
+password = <CREATED_DATABASE_PASSWORD>
+host = localhost
+port = 5432
+database = <CREATED_DATABASE_NAME>
+
+
+// Routes
+
+1) Auth Module :-
+
+Register : localhost:5000/auth/register 
+JSON Body :-
+{
+    "name": "Herik",
+    "email": "herik@gmail.com",
+    "password": "herik"
+}
+
+Login : localhost:5000/auth/login
+JSON Body :- 
+{
+    "email": "herik@gmail.com",
+    "password": "herik"
+}
+
+Verify User : localhost:5000/auth/is-verify
+Pass in Headers => token : <Paste_YOUR_JWT_Token_Here>
+
+2) Dashboard Module :- 
+
+Dashboard Route : localhost:5000/dashboard
